@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './Components/headerComponent/header';
 import Services from './Components/servicesComponent/Services';
+import Contact from './Components/contactComponent/Contact'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <header className="App-header">
         <Header />
         <Services />
+        <Contact />
 
       </header>
     </div>

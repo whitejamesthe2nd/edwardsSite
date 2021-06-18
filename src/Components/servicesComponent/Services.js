@@ -12,9 +12,11 @@ let Services = ()=>{
     return(
         <div>
             <h2>Services</h2>
-            <p>Tit Sucker</p>
-            <p>Clit Tugger</p>
-            <p></p>
+            <p>Tech Handy Man</p>
+            <p>Mobile Mechanic</p>
+            <p>Fleet Servicing</p>
+            <p>Roadside Assitance</p>
+            <p>Stage One Repairs</p>
         </div>
     )
 }

@@ -9,12 +9,15 @@ let Header = ()=>{
             width:'170px',
             height:'200px',
             borderRadius: '50%',
+        },
+        header:{
+            // backgroundColor: 'beige'
         }
 
     })
     let classes = useStyles();
     return(
-        <div>
+        <div className={classes.header}>
             <img src={eddie} alt={'foundersImage'} className={classes.founderImage}></img>
             <h2 >Edj Handie Man Services</h2>
             <p>EDJ Handy services has been serving north-east Ohio and South east Michigan for the last<br></br> 8 years and many staisfied costumers.</p>

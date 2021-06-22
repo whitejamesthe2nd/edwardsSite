@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import ReduxStore from './redux/store/ReduxStore';
 import {Provider} from 'react-redux';
 
-const store = ReduxStore()
+const store = ReduxStore({completion:{time:'3:00PM',person:'samantha'}})
 
 ReactDOM.render(
   <Provider store={store}>

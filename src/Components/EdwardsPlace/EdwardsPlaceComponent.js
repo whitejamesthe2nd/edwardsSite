@@ -1,22 +1,27 @@
 import React,{useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {completion} from '../../redux/actions/CompletionActions'
+import { useHistory } from 'react-router-dom';
+import {createCompletion} from '../../redux/actions/CompletionActions';
 
-let EdwardsPlaceComponent = ()=>{
+export let data= {};
+let EdwardsPlaceComponent = (props)=>{
     const dispatch = useDispatch();
     const [time,setTime] = useState(null);
     const [person,setPerson] = useState(null);
+    const history = useHistory();
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        let data = {
+        data = {
             time,
             person
         }
         console.log(data);
-        dispatch(completion(data))
+        dispatch(createCompletion(data));
+        history.push('/');
 
     }
+    // console.log(props);
 
 
     return(
@@ -28,7 +33,9 @@ let EdwardsPlaceComponent = ()=>{
             <h3>Anticipated Time of Completion:</h3>
             <input type='time' placeholder='Time of Completion' onChange={(e)=> setTime(e.target.value)}></input>
             <h3>Next in Line:</h3>
-            <input type='text' placeholder='next in line' onChange={(e)=>setPerson(e.target.value)}></input>
+            <input type='text' placeholder='next in line' onChange={(e)=> {
+                console.log(person);
+                setPerson(e.target.value)}}></input>
             <br />
             <button type='submit'>Send</button>
             </form>

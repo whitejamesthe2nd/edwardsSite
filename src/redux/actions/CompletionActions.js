@@ -1,25 +1,28 @@
 export const COMPLETION = "COMPLETION";
+export const RELOAD = "RELOAD";
 
 //!ACTIONS
-export const completion = (completion) => {
+export const completion = (data) => {
     return {
         type: COMPLETION,
-        completion
+        data
+    }
+}
+export const reload = (data) => {
+    return {
+        type: RELOAD,
     }
 }
 
-
 //! THUNKS
-// export const createCompletion = () => {
+export const createCompletion = (data) => {
 
-//     return async dispatch => {
-//         const res = await fetch(`/api/skills/`);
+    return async dispatch => {
 
-//         if (res.ok) {
-//             const data = await res.json();
-//             console.log(data)
-//             dispatch(loadSkills(data))
-//         }
-//         return res;
-//     };
-// };
+        if (data) {
+            console.log(data)
+           dispatch(completion(data))
+        }
+        return data;
+    };
+};

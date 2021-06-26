@@ -33,7 +33,7 @@ let EdwardsPlaceComponent = (props)=>{
             <h3>Anticipated Time of Completion:</h3>
             <input type='time' placeholder='Time of Completion' onChange={(e)=> setTime(e.target.value)}></input>
             <h3>Next in Line:</h3>
-            <input type='text' placeholder='next in line' onChange={(e)=> {
+            <input type='text' placeholder='Next in Line' onChange={(e)=> {
                 console.log(person);
                 setPerson(e.target.value)}}></input>
             <br />

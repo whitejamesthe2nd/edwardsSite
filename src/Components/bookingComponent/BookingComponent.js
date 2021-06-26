@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import {createCompletion} from '../../redux/actions/CompletionActions'
 
 let BookingComponent = (props) => {
     // const booking = useSelector((state)=>state.completion);

@@ -37,7 +37,7 @@ let EdwardsPlaceComponent = (props)=>{
                 console.log(person);
                 setPerson(e.target.value)}}></input>
             <br />
-            <button type='submit'>Send</button>
+            <button type='submit'>Submit</button>
             </form>
 
         </div>

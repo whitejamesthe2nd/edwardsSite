@@ -15,6 +15,7 @@ let Card = (props)=>{
             borderRadius:'5px'
         }
     })
+    // hover css in makestyles material ui
     let classes = useStyles();
     let {img, title, description, alt} = props
     return(
